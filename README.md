@@ -12,6 +12,8 @@ KEDA allows for fine-grained autoscaling (including to/from zero) for event driv
 as a Kubernetes Metrics Server and allows users to define autoscaling rules using a dedicated Kubernetes custom
 resource definition.
 
+
+
 KEDA can run on both the cloud and the edge, integrates natively with Kubernetes components such as the Horizontal
 Pod Autoscaler, and has no external dependencies.
 
