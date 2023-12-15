@@ -153,3 +153,17 @@ jobs:
       output: ''
       exit-code: 1
       publish: false
+
+  eventing-deepcopy-up-to-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run fmt
+        run: go fmt ./...
+      - name: Check if zz_generated.deepcopy.go file is up to date
+        run: |
+          if [[ -n "$(git diff --exit-code apis/eventing/v1alpha1/zz_generated.deepcopy.go)" ]]; then
+            echo "apis/eventing/v1alpha1/zz_generated.deepcopy.go is not up to date. Please run 'go fmt' and commit the changes."
+            exit 1
+          else
+            echo "apis/eventing/v1alpha1/zz_generated.deepcopy.go is up to date."
+          fi
