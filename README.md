@@ -13,6 +13,7 @@ as a Kubernetes Metrics Server and allows users to define autoscaling rules usin
 resource definition.
 
 
+
 KEDA can run on both the cloud and the edge, integrates natively with Kubernetes components such as the Horizontal
 Pod Autoscaler, and has no external dependencies.
 
